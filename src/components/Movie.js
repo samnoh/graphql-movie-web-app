@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Movie = ({ id }) => {
+const Movie = ({ id, title, medium_cover_image }) => {
     return (
-        <div>
-            <Link to={`/${id}`}>{id}</Link>
-        </div>
+        <Link to={`/${id}`}>
+            <img src={medium_cover_image} alt={`${title}'s poster`} />
+        </Link>
     );
 };
 

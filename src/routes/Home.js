@@ -11,7 +11,7 @@ const Home = () => {
 
     if (error) return 'Error!';
 
-    if (data && data.movies) return data.movies.map(m => <Movie key={m.id} id={m.id} />);
+    if (data && data.movies) return data.movies.map(movie => <Movie key={movie.id} {...movie} />);
 };
 
 export default Home;

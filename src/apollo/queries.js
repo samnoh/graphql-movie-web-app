@@ -12,9 +12,10 @@ export const GET_MOVIES = gql`
 export const GET_MOVIE = gql`
     query geMovie($id: Int!) {
         movie(id: $id) {
-            id
             title
             medium_cover_image
+            language
+            rating
             description_intro
         }
     }

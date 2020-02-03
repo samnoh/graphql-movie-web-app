@@ -12,7 +12,21 @@ const Detail = () => {
 
     if (error) return 'Error!';
 
-    if (data && data.movie) return data.movie.title;
+    if (data && data.movie) {
+        const { medium_cover_image, title, language, rating, description_intro } = data.movie;
+
+        return (
+            <ul>
+                <li>
+                    <img src={medium_cover_image} alt={`${title}'s poster`} />
+                </li>
+                <li>{title}</li>
+                <li>{language}</li>
+                <li>{rating}</li>
+                <li>{description_intro}</li>
+            </ul>
+        );
+    }
 };
 
 export default Detail;
