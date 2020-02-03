@@ -18,5 +18,9 @@ export const GET_MOVIE = gql`
             rating
             description_intro
         }
+        suggestions(id: $id) {
+            title
+            medium_cover_image
+        }
     }
 `;
